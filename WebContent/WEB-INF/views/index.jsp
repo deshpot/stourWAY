@@ -4,16 +4,12 @@
   <title>丝途商道</title>
   <link rel="stylesheet" href="resources/css/bootstrap.min.css">
   <link rel="stylesheet" href="resources/css/stourway.css">
-  <link rel="stylesheet" type="text/css" href="resources/js/CLEditor/jquery.cleditor.css" />
   <link rel="stylesheet" href="resources/css/datepicker.css">
   <script src="resources/js/jquery-1.8.3.js"></script>
   <script src="resources/js/jquery.form.js"></script>
   <script src="resources/js/bootstrap.min.js"></script>
   <script src="resources/js/bootstrap-datepicker.js"></script>
   <script src="resources/js/bootstrap-datepicker.zh-CN.js"></script>
-  <script src="resources/js/CLEditor/jquery.cleditor.js"></script>
-  <script src="resources/js/CLEditor/jquery.cleditor.table.min.js"></script>
-  <script src="resources/js/CLEditor/jquery.cleditor.qzsituimage.js"></script>
   <script src="resources/js/stourway.js"></script>
 </head>
 <body>

@@ -17,9 +17,9 @@
 		<thead>
 		   <tr>
         <td colspan="3">目录：
-        <a  onclick="gotoPage('/knowledge/knowledge/all/<%=currentTag %>/<%=currentPage %>')" id="menuall">所有</a>
+        <a  onclick="gotoPage('/knowledge/knowledge/all/<%=currentTag %>/1')" id="menuall">所有</a>
         <% for(KnowledgeMenu menu : menuList) { %>
-         &nbsp;|&nbsp;<a  onclick="gotoPage('/knowledge/knowledge/<%=menu.getId() %>/<%=currentTag %>/<%=currentPage %>')" id="menu<%=menu.getId() %>"><%=menu.getName() %></a>
+         &nbsp;|&nbsp;<a  onclick="gotoPage('/knowledge/knowledge/<%=menu.getId() %>/<%=currentTag %>/1')" id="menu<%=menu.getId() %>"><%=menu.getName() %></a>
         <% } %>
         </td>
       </tr>
@@ -27,7 +27,7 @@
         <td colspan="3">标签：
         <a  onclick="gotoPage('/knowledge/knowledge/<%=currentMenu %>/all/<%=currentPage %>')" id="tagall">所有</a>
         <% for(KnowledgeTag tag : tagList) { %>
-          &nbsp;|&nbsp;<a  onclick="gotoPage('/knowledge/knowledge/<%=currentMenu %>/<%=tag.getId() %>/<%=currentPage %>')" id="tag<%=tag.getId() %>"><%=tag.getName() %></a>
+          &nbsp;|&nbsp;<a  onclick="gotoPage('/knowledge/knowledge/<%=currentMenu %>/<%=tag.getId() %>/1')" id="tag<%=tag.getId() %>"><%=tag.getName() %></a>
         <% } %>
         </td>
       </tr>
@@ -41,7 +41,7 @@
 			<% for(Post post : posts) { %>
 			<tr id="<%=post.getId() %>"
 				onclick="gotoPage('/knowledge/<%=currentMenu %>/<%=currentTag %>/<%=currentPage %>/post/<%=post.getId() %>')">
-				<td><%=post.getTitle().replaceAll("<", "&lt;").replaceAll("<", "&gt;") %></td>
+				<td><%=post.getTitle().replaceAll("<", "&lt;").replaceAll(">", "&gt;") %></td>
 				<td><%=post.getAuthor() %></td>
 				<td><%=new SimpleDateFormat("yyyy年MM月dd日 hh时mm分").format(post.getDatetime()) %></td>
 			</tr>

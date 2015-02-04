@@ -318,6 +318,11 @@ public class KnowledgeService {
 	}
 	
 	@Transactional
+	public FileItem updateFile(FileItem fileItem){
+		return fileItemDao.update(fileItem);
+	}
+	
+	@Transactional
 	public void deleteFile(String id){
 		FileItem fileItem=fileItemDao.read(FileItem.class, id);
 		fileItemDao.delete(fileItem);

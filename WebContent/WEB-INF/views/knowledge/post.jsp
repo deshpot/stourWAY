@@ -10,7 +10,7 @@
 <% int currentPage = (Integer.parseInt((String)request.getAttribute("currentPage"))); %>
 
 <div id="post" class="col-md-10">
-    <h3><%=post.getTitle() %><small><%=post.getAuthor() %>@<%=post.getDatetime() %></small></h3>
+    <h3><%=post.getTitle().replaceAll("<", "&lt;").replaceAll(">", "&gt;")  %><small><%=post.getAuthor() %>@<%=post.getDatetime() %></small></h3>
     <%=post.getContent() %><br>
 </div>
 <div class="col-md-2" style="margin-top: 20px;border-left: 1px solid;padding: 20px;">
